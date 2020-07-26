@@ -11,6 +11,9 @@
 //g++ Main.o Cuda.o
 #else
 #endif
+
+#if !defined NOMAIN
 int main(int argv,char **argv){
     return (int)false;
 }
+#endif

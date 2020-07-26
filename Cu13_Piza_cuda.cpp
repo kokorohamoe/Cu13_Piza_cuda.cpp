@@ -28,7 +28,7 @@ int callKernel();
 
 #if !defined __CUDACC__
 int main(int argv,char **){
-#if defined CLANG
+#if defined __clang__ 
     printf("ln -s Cu13_Piza_cuda.cpp Cuda.cu\n");
     printf("nvcc -c Cuda.cu\n");
     printf("ln -s Cu13_Piza_cuda.cpp Maub.cc\n");

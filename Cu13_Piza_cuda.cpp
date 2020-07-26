@@ -35,7 +35,7 @@ int main(int argv,char **){
 #if defined __clang__ 
     printf("ln -s Cu13_Piza_cuda.cpp Cuda.cu\n");
     printf("nvcc -c Cuda.cu\n");
-    printf("ln -s Cu13_Piza_cuda.cpp Maub.cc\n");
+    printf("ln -s Cu13_Piza_cuda.cpp Main.cc\n");
     std::cout <<"g++ -c Main.cc\n"<<std::flush;
     std::cout <<"gcc Main.o Cuda.o"<<std::endl;
 #else

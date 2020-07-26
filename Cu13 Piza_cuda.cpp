@@ -24,7 +24,13 @@ int callKernel();
 
 #if !defined __CUDACC__
 int main(int argv,char **argv){
+#if defined CLANG
+    printf("nvcc -c Cuda.cu\n");
+    std::cout <<"g++ -c Main.cc\n"<<std::flush;
+    std::cout <<"gcc Main.o Cuda.o"<<std::endl;
+#else
     callKernel();
+#endif
     return (int)false;
 }
 #endif

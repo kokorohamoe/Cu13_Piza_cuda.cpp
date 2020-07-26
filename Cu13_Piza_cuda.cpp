@@ -13,6 +13,10 @@
 #endif
 #if defined __CUDACC__ 
     #include <cuda_runtime.h>// additional cost $0.01
+#elif defined __clang__ 
+#include <stdio.h>
+#include <iostream>
+
 #endif
 
 

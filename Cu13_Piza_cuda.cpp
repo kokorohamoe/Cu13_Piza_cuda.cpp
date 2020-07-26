@@ -11,6 +11,10 @@
 //g++ Main.o Cuda.o
 #else
 #endif
+#if defined __CUDACC__ 
+    #include <cuda_runtime.h>// additional cost $0.01
+#endif
+
 
 #if defined __CUDACC__
 void kernel(int *dst,int *src){

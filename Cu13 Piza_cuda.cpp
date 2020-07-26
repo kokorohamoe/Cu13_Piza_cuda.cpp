@@ -12,8 +12,19 @@
 #else
 #endif
 
-#if !defined NOMAIN
+#if defined __CUDACC__
+void kernel(int *dst,int *src){
+}
+int callKernel(){
+    kernel<<<1000,1000>>>(dst,src);
+}
+#else
+int callKernel();
+#endif
+
+#if !defined __CUDACC__
 int main(int argv,char **argv){
+    callKernel();
     return (int)false;
 }
 #endif
